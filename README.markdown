@@ -1,7 +1,7 @@
 ziggy
 =====
 
-Cache any method on any class using rails.cache
+Cache any method on any class using Rails.cache
 
 Install
 -------
@@ -12,7 +12,7 @@ Install
 Introduction
 ------------
 
-ziggy will cache methods and then expire them. Content is stored in and read from the Rails.cache using Rails.cache.write(key, value) and Rails.cache.read(key).
+ziggy will cache methods and then expire them. The results from method invocations are stored in and read from the Rails.cache using Rails.cache.write(key, value) and Rails.cache.read(key).
 
 ### Cache a method
 
