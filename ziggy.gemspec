@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ziggy}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Oliver Searle-Barnes"]
@@ -10,10 +10,14 @@ Gem::Specification.new do |s|
   s.description = %q{ziggy can be used to cache any method on any class and allows custom keys and expiration times}
   s.email = %q{oliver@opsb.co.uk}
   s.extra_rdoc_files = [
-    "README.markdown"
+    "LICENSE",
+     "README.markdown"
   ]
   s.files = [
-    "README.markdown",
+    "LICENSE",
+     "README.markdown",
+     "RakeFile",
+     "VERSION.yml",
      "lib/ziggy.rb",
      "ziggy.gemspec"
   ]
