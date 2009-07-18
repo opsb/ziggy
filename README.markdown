@@ -30,7 +30,7 @@ Introduction
 
 	class TwitterUser
 	  include Ziggy
-	  cached :timeline
+	  cached :timeline, :direct_messages
 
 	  def timeline
 		twitter_client.timeline
