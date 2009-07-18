@@ -1,0 +1,15 @@
+task :default => [:gemspec]
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "ziggy"
+    gemspec.summary = "Cache any method on any class"
+    gemspec.description = "ziggy can be used to cache any method on any class and allows custom keys and expiration times"
+    gemspec.email = "oliver@opsb.co.uk"
+    gemspec.homepage = "http://github.com/opsb/ziggy"
+    gemspec.authors = ["Oliver Searle-Barnes"]
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
+end
