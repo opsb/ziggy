@@ -12,7 +12,7 @@ $ sudo gem install opsb-ziggy
 Introduction
 ------------
 
-### Add caching to a method
+### Cache a method
 
 	class TwitterUser
 	  include Ziggy
@@ -44,7 +44,7 @@ Introduction
 
 	end
 
-### Specify expire_after
+### expire_after
 
 	class TwitterUser
 	  include Ziggy
@@ -58,7 +58,7 @@ Introduction
 
 	end
 
-### Use block to parameterise key
+### Customise key
 
 The method name and arguments are always used as the base of the cache key. Using a block you can differentiate the keys based on further criteria e.g. screen_name.
 
@@ -74,7 +74,7 @@ The method name and arguments are always used as the base of the cache key. Usin
 
 	end
 
-### Specify different options for different methods
+### Different options for different methods
 
 The method name and arguments are always used as the base of the cache key. Using a block you can differentiate the keys based on further criteria e.g. screen_name.
 
