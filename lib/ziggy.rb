@@ -1,4 +1,4 @@
-module Ziggy2
+module Ziggy
 
   def self.included(base)
     base.extend ClassMethods
