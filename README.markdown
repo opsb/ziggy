@@ -60,7 +60,7 @@ Introduction
 
 ### Customise key
 
-The method name and arguments are always used as the base of the cache key. Using a block you can differentiate the keys based on further criteria e.g. screen_name.
+The method name and arguments are always used as the base of the cache key. You can customise the start of the cache key using a block.
 
     class TwitterUser
       include Ziggy
@@ -75,8 +75,6 @@ The method name and arguments are always used as the base of the cache key. Usin
 	end
 
 ### Different options for different methods
-
-The method name and arguments are always used as the base of the cache key. You can customise the start of the cache key using a block.
 
 	class TwitterUser
 	  include Ziggy
