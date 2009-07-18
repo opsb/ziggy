@@ -12,6 +12,8 @@ Install
 Introduction
 ------------
 
+ziggy will cache methods and then expire them. Content is stored in and read from the Rails.cache using Rails.cache.write(key, value) and Rails.cache.read(key).
+
 ### Cache a method
 
 	class TwitterUser
