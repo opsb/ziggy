@@ -46,6 +46,8 @@ Introduction
 
 ### expire_after
 
+The default expire_after time is 2.5.minutes, to customise do
+
 	class TwitterUser
 	  include Ziggy
 	  cached :timeline, :expire_after => 1.5.minutes
