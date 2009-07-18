@@ -14,47 +14,49 @@ Introduction
 
 ### Add caching to a method
 
-class TwitterUser
-  include Ziggy
-  cached :timeline
+	class TwitterUser
+	  include Ziggy
+	  cached :timeline
 
-  def timeline
-	twitter_client.timeline
-  end
+	  def timeline
+		twitter_client.timeline
+	  end
 
-  ...
+	  ...
 
-end
+	end
 
 ### Cache many methods
-class TwitterUser
-  include Ziggy
-  cached :timeline
 
-  def timeline
-	twitter_client.timeline
-  end
+	class TwitterUser
+	  include Ziggy
+	  cached :timeline
 
-  def direct_messages
-    twitter_client.direct_messages
-  end
+	  def timeline
+		twitter_client.timeline
+	  end
 
-  ...
+	  def direct_messages
+	    twitter_client.direct_messages
+	  end
 
-end
+	  ...
+
+	end
 
 ### Specify expire_after
-class TwitterUser
-  include Ziggy
-  cached :timeline, :expire_after => 1.5.minutes
 
-  def timeline
-	twitter_client.timeline
-  end
+	class TwitterUser
+	  include Ziggy
+	  cached :timeline, :expire_after => 1.5.minutes
 
-  ...
+	  def timeline
+		twitter_client.timeline
+	  end
 
-end
+	  ...
+
+	end
 
 ### Use block to parameterise key
 
