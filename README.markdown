@@ -96,3 +96,8 @@ The method name and arguments are always used as the base of the cache key. You 
 	  ...
 
 	end
+	
+### Disable ziggy
+Perhaps you want to disable ziggy for tests? Add the following to your test.rb
+
+    Ziggy::active = false
