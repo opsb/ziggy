@@ -1,4 +1,13 @@
 module Ziggy
+  @@active = true
+  
+  def self.active=(active)
+    @@active = active
+  end
+  
+  def self.active
+    @@active
+  end
 
   def self.included(base)
     base.extend ClassMethods
@@ -12,6 +21,7 @@ module Ziggy
 
   module ClassMethods
     def cached(*cachable_methods, &block)
+      return unless Ziggy::active
       opts = (cachable_methods.pop if cachable_methods.last.kind_of? Hash) || {}
       @should_be_cached += cachable_methods
       cachable_methods.each do |m| 
