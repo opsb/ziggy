@@ -48,7 +48,7 @@ module Ziggy
           key = self.class.build_key(self, method, args)
           return Rails.cache.read(key) if Rails.cache.exist?(key)
           result = send(method_without_cache, *args)
-          Rails.cache.write(key, result, :expires_in => expire_after(method))
+          Rails.cache.write(key, result, :expires_in => self.class.expire_after(method))
           result
         end
       end
