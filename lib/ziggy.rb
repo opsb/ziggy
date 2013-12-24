@@ -60,7 +60,7 @@ module Ziggy
     end
     
     def build_key(instance, method, args)
-      invocation_key = "#{method}#{ args.collect{ |a| a.to_s } }"
+      invocation_key = "#{instance.class.name}#{method}#{ args.collect{ |a| a.to_s } }"
       keygen = @keygens[method]
       differentiator = (keygen.call(instance) unless keygen.nil?) || ""
       differentiator + invocation_key
